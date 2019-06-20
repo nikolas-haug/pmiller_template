@@ -8,6 +8,7 @@
 :root {
     --primary-font: 'VCR OSD Mono', 'Lucida Console', Monaco, monospace;
     --secondary-font: 'Hind', sans-serif;
+    --base-font-size: 16px;
 }
 
 *, *::before, *::after {
@@ -20,10 +21,26 @@
 
 body {
     font-family: var(--primary-font);
+    font-size: var(--base-font-size);
 }
 
 p {
     font-family: var(--secondary-font);
+}
+
+/* Styles for the scroll to top button div */
+
+.scroll__top-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: coral;
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
 }
 
 /* Main Landing Background */
@@ -52,8 +69,8 @@ p {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
-    grid-gap: 10px;
-    margin-top: 100px;
+    grid-gap: 1.4em;
+    margin-top: 5em;
 }
 
 .main__content {
@@ -61,7 +78,7 @@ p {
     display: flex;
     flex-direction: column;
     margin-bottom: 2.5em;
-    background: rgba(242, 243, 244, 0.7);
+    background: rgba(242, 243, 244, 0.85);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -80,12 +97,14 @@ p {
     display: flex;
     flex-direction: column;
     background: black;
+    padding: 0.7em;
 }
 
 .main-links a {
     text-decoration: none;
+    font-size: 1.4em;
     color: #fff;
-    margin-left: 0.35em;
+    padding: 0.35em 0;
 }
 
 /* Main content header */
@@ -114,4 +133,23 @@ p {
 
 .post__text {
     padding: 1.4em 2.2em;
+}
+
+/* Media queries for main blog page */
+
+@media (max-width: 700px) {
+    .main-links {
+        display: none;
+    }
+    .main__content {
+        grid-column: 2 / span 10;
+        margin-top: 4.5em;
+    }
+}
+
+@media (max-width: 548px) {
+    .main__content {
+        grid-column: span 12;
+        margin: 4.5em 1.5em 5.5em 1.5em;
+    }
 }

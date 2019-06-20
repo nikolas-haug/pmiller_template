@@ -11,14 +11,33 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Navbar stylesheet -->
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="css/nav.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- PUT HEADER HERE -->
+    <!-- Scroll to top div - TO DO - Add this to the WP Head file -->
+    <div class="scroll__top-btn"><span class="arrow"></span></div>
+
+   <!-- Dropdown mobile nav - HIDDEN ON ALL VIEWS EXCEPT MOBILE/TABLET -->
+   <div class="main__nav">
+       <!-- Add line height to center vertically -->
+        <div class="main__logo">
+            LoGo
+            <!-- <img src="assets/skullimagesmall.jpg" alt="navigation logo"> -->
+        </div>
+        <div class="main__collapse">
+            <ul class="main__nav-items">
+                <li><a href="#!">Main</a></li>
+                <li><a href="#!">About</a></li>
+                <li><a href="#!">Shows</a></li>
+                <li><a href="#!">Bands</a></li>
+                <li><a href="#!">Production</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Fixed background for changing images -->
     <div class="fixed__bg">
@@ -72,8 +91,11 @@
             </ul>
         </div>
 
-    <!-- end grid wrapper -->
+        <!-- end grid wrapper -->
     </div>
+
+    <!-- Main JS file - TO - Add to WP Foot file -->
+    <script src="js/main.js"></script>
 
 </body>
 
