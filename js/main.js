@@ -20,3 +20,14 @@ function topFunction() {
 
 window.addEventListener('scroll', scrollBtnDisplay);
 scrollButton.addEventListener('click', topFunction);
+
+// for the dropdown skull navigation
+
+const skull = document.querySelector('.main__logo');
+const navCollapse = document.querySelector('.main__collapse');
+
+function openMenu() {
+    navCollapse.classList.toggle('main__nav--open');
+}
+
+skull.addEventListener('click', openMenu);
