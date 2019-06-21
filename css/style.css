@@ -83,6 +83,7 @@ p {
 }
 
 .main__content img, .main__content iframe {
+    min-width: 1px;
     max-width: 100%;
 }
 
